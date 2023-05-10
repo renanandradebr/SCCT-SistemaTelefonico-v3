@@ -1,32 +1,87 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar class="navbar" app color="primary" dark flat>
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-container class="py-0 fill-height">
+        <div>
+          <v-img src="./assets/logo-scct2.png" transition="scale-transition" width="100" />
+        </div>
+
+        <v-divider class="mx-4" vertical></v-divider>
+
+        <v-btn v-for="link in links" :key="link" text>
+          {{ link }}
+        </v-btn>
+        <v-spacer></v-spacer>
+        <v-responsive max-width="260">
+          <v-text-field class="mp-10" dense flat hide-details rounded solo-inverted append-icon="mdi-magnify"
+            label="Pesquisar"></v-text-field>
+        </v-responsive>
+        <v-divider class="mx-4" vertical></v-divider>
+        <v-avatar class="mr-10" color="white darken-1" size="32"></v-avatar>
+
+      </v-container>
+
+    </v-app-bar>
+    
+    <v-row>
+      <v-col cols="12" class="container">
+        <v-main class="grey lighten-3">
+          <v-container>
+            <v-row>
+              <v-col cols="2">
+
+                <v-sheet rounded="lg">
+                
+                  
+
+                  <v-list color="transparent">
+                    <v-list-item v-for="n in 2" :key="n" link>
+                      <v-list-item-content>
+                        <v-list-item-title>
+                          Option {{ n }}
+                        </v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+
+                    <v-divider class="my-2"></v-divider>
+
+                    
+                  </v-list>
+                </v-sheet>
+              </v-col>
+
+              <v-col cols="10">
+                <v-sheet min-height="70vh" rounded="lg"> 
+                  <router-view />
+                </v-sheet>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-main>
+      </v-col>
+    </v-row>
+
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+export default {
+  components: { },
+  name: 'App',
 
-    &.router-link-exact-active {
-      color: #42b983;
+  data() {
+
+    return {
+      search: '',
+      drawer: false,
+      links: [
+        'Dashboard',
+        'Profile',
+      ],
     }
-  }
-}
-</style>
+  },
+};
+</script>
