@@ -1,24 +1,40 @@
-# scct-vue-v2
+# Sistema Telefônico
 
-## Project setup
-```
-npm install
-```
+Este é um projeto Vue para um sistema telefônico. O sistema inclui várias páginas de cadastro e agendas telefônicas. O objetivo deste projeto é fornecer um sistema simples e fácil de usar para gerenciar contatos telefônicos.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Funcionalidades
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Página inicial com informações sobre o sistema
+- Página de login para acessar o sistema
+- Página de cadastro de usuário
+- Página de lista de contatos
+- Página de detalhes do contato
+- Página de edição do contato
+- Página de adição do contato
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Como executar o projeto
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Clone o repositório
+2. Execute `npm install` para instalar as dependências
+3. Execute `npm run serve` para iniciar o servidor de desenvolvimento
+4. Acesse http://localhost:8080 no seu navegador para visualizar o sistema
+
+## Tecnologias utilizadas
+
+- Vue.js
+- Vuex
+- Vue Router
+- Axios
+- Bootstrap
+
+## Contribuição
+
+Contribuições são sempre bem-vindas! Se você quiser contribuir com este projeto, abra uma issue ou envie um pull request.
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais informações.
+
+## Autores
+
+- Renan Andrade - Desenvolvedor do projeto
