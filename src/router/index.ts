@@ -9,7 +9,6 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'login',
     component: LoginView
-    
   },
   {
     path: '/home',

@@ -29,29 +29,8 @@
         <v-main class="grey lighten-3">
           <v-container>
             <v-row>
-              <v-col cols="2">
 
-                <v-sheet rounded="lg">
-                
-                  
-
-                  <v-list color="transparent">
-                    <v-list-item v-for="n in 2" :key="n" link>
-                      <v-list-item-content>
-                        <v-list-item-title>
-                          Option {{ n }}
-                        </v-list-item-title>
-                      </v-list-item-content>
-                    </v-list-item>
-
-                    <v-divider class="my-2"></v-divider>
-
-                    
-                  </v-list>
-                </v-sheet>
-              </v-col>
-
-              <v-col cols="10">
+              <v-col cols="12">
                 <v-sheet min-height="70vh" rounded="lg"> 
                   <router-view />
                 </v-sheet>
@@ -78,8 +57,8 @@ export default {
       search: '',
       drawer: false,
       links: [
-        'Dashboard',
-        'Profile',
+        'Página Inicial',
+        'Ajuda',
       ],
     }
   },

@@ -1,4 +1,5 @@
 <template>
+  
   <v-container>
     <v-divider class="my-3"></v-divider>
     <v-row>
@@ -23,7 +24,6 @@
 
               <v-btn block color="primary" class="mb-2" elevation="1"> <v-icon>mdi-phone-log</v-icon>ACESSAR LOGS
                 DE USUÁRIO</v-btn>
-              <v-img id="imgFundo" src="https://i.pinimg.com/564x/a7/d6/d2/a7d6d279c1e8611828b6385ed7a46c09.jpg"></v-img>
             </div>
 
           </v-row>
@@ -69,15 +69,6 @@ export default {
   align-content: center;
   opacity: 100%;
 }
-
-#imgFundo {
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: auto;
-  opacity: 1; }
-
 .logo-scct{
   width: 100%;
   height: auto;
