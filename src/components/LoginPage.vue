@@ -1,10 +1,10 @@
 <template>
   <v-container class="fill-height">
     <v-row justify="center">
-      <v-col md="4" sm="8">
-        <v-card class="elevation-12">
-          <v-toolbar color="white" dark flat class="d-flex align-center">        
-              <v-img src="../assets/logo-scct.png"  contain class="imglogo" width="130" />
+      <v-col cols="12" md="4" sm="8" >
+        <v-card class="cardlogin elevation-12">
+          <v-toolbar color="white" dark flat class="d-flex align-center">
+            <v-img src="../assets/logo-scct.png" contain class="imglogo" width="130" />
           </v-toolbar>
           <v-card-text>
             <v-form @submit.prevent="Login">
@@ -13,6 +13,9 @@
                 clearable></v-text-field>
               <v-checkbox v-model="Manterconectado" label="Manter-me Conectado" variant="outlined"></v-checkbox>
               <v-btn type="submit" color="blue" text-color="white" block variant="outlined">Acessar</v-btn>
+              <div class="EsqueciSenha">
+                <a href="/esqueceu-senha">Esqueci a senha</a>
+              </div>
             </v-form>
           </v-card-text>
         </v-card>
@@ -57,7 +60,15 @@ export default {
 .toolbar {
   color: #fff;
 }
-.imglogo{
+
+.imglogo {
   margin-left: 50%;
+}
+.EsqueciSenha{
+  margin-left: 25%;
+  padding: 5%;
+}
+.cardlogin{
+  border: solid rgb(54, 54, 216) 2px;
 }
 </style>
