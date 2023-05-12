@@ -1,29 +1,36 @@
 <template>
     <v-container fluid>
         <v-row justify="center">
-            <v-col cols="12" sm="8" md="6">
-                <v-card class="cardcadastro px-27">
+            <v-col cols="12" sm="8" md="6" class="botoes3">
+                <v-card id="formulario1">
                     <v-card-title class="text-center">Cadastro de Usuário</v-card-title>
                     <v-card-text>
                         <v-form ref="form">
-                            <v-row>
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="nome" label="Usuário" required></v-text-field> </v-col>
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="cargo" label="Cargo" type="email"
-                                        required></v-text-field></v-col>
+                            <div id="botoes1">
+                                <v-row>
+                                    <v-col cols="6" md="6">
+                                        <v-text-field v-model="nome" label="Usuário" required outlined
+                                            clearable></v-text-field> </v-col>
+                                    <v-col cols="6" md="6">
+                                        <v-text-field v-model="cargo" label="Cargo" type="email" required outlined
+                                            clearable></v-text-field></v-col>
 
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="setor" label="Setor" type="name" required></v-text-field></v-col>
-                            </v-row>
+                                    <v-col cols="6" md="6">
+                                        <v-text-field v-model="setor" label="Setor" type="name" required outlined
+                                            clearable></v-text-field></v-col>
+                                </v-row>
+                            </div>
                             <v-row>
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="lotação" label="Lotação" required></v-text-field></v-col>
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="telefone" label="Telefone" required></v-text-field></v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="lotação" label="Lotação" required outlined
+                                        clearable></v-text-field></v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="telefone" label="Telefone" required outlined
+                                        clearable></v-text-field></v-col>
 
-                                <v-col cols="12" md="6">
-                                    <v-text-field v-model="setor" label="Setor" required></v-text-field></v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="setor" label="Setor" required outlined
+                                        clearable></v-text-field></v-col>
                             </v-row>
 
                             <v-checkbox v-model="termos" label="Li e concordo com os termos e condições"
@@ -38,24 +45,34 @@
     </v-container>
 </template>
 <script>
- export default {
+export default {
     data() {
-      return {
-        nome: "",
-        email: "",
-        sexo: "",
-        nascimento: "",
-        cpf: "",
-        telefone: "",
-        setor: "",
-        matricula: "",
-        termos: false
-      };
+        return {
+            nome: "",
+            email: "",
+            sexo: "",
+            nascimento: "",
+            cpf: "",
+            telefone: "",
+            setor: "",
+            matricula: "",
+            termos: false
+        };
     },
     methods: {
-      submit() {
-        console.log("Formulário enviado!");
-      }
+        submit() {
+            console.log("Formulário enviado!");
+        }
     }
-  };
+};
 </script>
+<style>
+#formulario1 {
+    border: solid rgb(7, 88, 134) 2px;
+    
+}
+.botoes3{
+    border: solid red 2px;]
+    padding: ;
+}
+</style>
