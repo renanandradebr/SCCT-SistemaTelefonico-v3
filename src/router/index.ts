@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import LoginView from '../components/LoginPage.vue'
 import HomeView from '../views/HomeView.vue'
+import Cadastro from '../components/CadastroUsuario.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -14,6 +15,11 @@ const routes: Array<RouteConfig> = [
     path: '/home',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/cadastro',
+    name: 'cadastro',
+    component: Cadastro
   },
   {
     path: '/about',
