@@ -62,8 +62,5 @@ export default {
       ],
     }
   },
-  methods() {
-    this.links
-  }
 };
 </script>
