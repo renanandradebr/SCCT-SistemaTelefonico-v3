@@ -52,12 +52,15 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
 .carousel-container {
   margin-top: 1%;
   margin-left: 12%;
 }
 
 .botoesScct {
+  font: normal 10px Sora;
   position: relative;
   overflow: hidden;
   padding: 5px;

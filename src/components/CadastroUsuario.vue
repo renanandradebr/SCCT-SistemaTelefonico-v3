@@ -6,36 +6,31 @@
                     <v-card-title class="text-center">Cadastro de Usuário</v-card-title>
                     <v-card-text>
                         <v-form ref="form">
-                            <div id="botoes1">
-                                <v-row>
-                                    <v-col cols="6" md="6">
-                                        <v-text-field v-model="nome" label="Usuário" required outlined
-                                            clearable></v-text-field> </v-col>
-                                    <v-col cols="6" md="6">
-                                        <v-text-field v-model="cargo" label="Cargo" type="email" required outlined
-                                            clearable></v-text-field></v-col>
-
-                                    <v-col cols="6" md="6">
-                                        <v-text-field v-model="setor" label="Setor" type="name" required outlined
-                                            clearable></v-text-field></v-col>
-                                </v-row>
-                            </div>
                             <v-row>
                                 <v-col cols="6" md="6">
+                                    <v-text-field v-model="nome" label="Usuário" required outlined clearable></v-text-field>
+                                </v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="cargo" label="Cargo" type="email" required outlined
+                                        clearable></v-text-field></v-col>
+                                <v-col cols="6" md="6">
                                     <v-text-field v-model="lotação" label="Lotação" required outlined
+                                        clearable></v-text-field></v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="função" label="Função" type="name" required outlined
+                                        clearable></v-text-field></v-col>
+                                <v-col cols="6" md="6">
+                                    <v-text-field v-model="setor" label="Setor" type="name" required outlined
                                         clearable></v-text-field></v-col>
                                 <v-col cols="6" md="6">
                                     <v-text-field v-model="telefone" label="Telefone" required outlined
                                         clearable></v-text-field></v-col>
 
-                                <v-col cols="6" md="6">
-                                    <v-text-field v-model="setor" label="Setor" required outlined
-                                        clearable></v-text-field></v-col>
                             </v-row>
 
                             <v-checkbox v-model="termos" label="Li e concordo com os termos e condições"
                                 required></v-checkbox>
-                            <v-btn type="submit" color="primary" class="mr-4">Cadastrar</v-btn>
+                            <v-btn type="submit" color="primary" class="mr-4">Salvar</v-btn>
                             <v-btn color="error" to="./home">Voltar</v-btn>
                         </v-form>
                     </v-card-text></v-card>
@@ -52,9 +47,11 @@ export default {
             email: "",
             sexo: "",
             nascimento: "",
-            cpf: "",
+            cargo: "",
             telefone: "",
             setor: "",
+            lotação: "",
+            função: "",
             matricula: "",
             termos: false
         };
@@ -69,10 +66,11 @@ export default {
 <style>
 #formulario1 {
     border: solid rgb(7, 88, 134) 2px;
-    
+
 }
-.botoes3{
-    border: solid red 2px;]
-    padding: ;
+
+.botoes3 {
+    border: solid red 2px;
+
 }
 </style>

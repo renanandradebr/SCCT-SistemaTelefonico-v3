@@ -18,7 +18,7 @@
             label="Pesquisar"></v-text-field>
         </v-responsive>
         <v-divider class="mx-4" vertical></v-divider>
-        <v-avatar class="mr-10" color="white darken-1" size="32"></v-avatar>
+       
 
       </v-container>
 
@@ -30,25 +30,26 @@
           <v-container>
             <v-row>
 
-              <v-col cols="12">
-                <v-sheet min-height="70vh" rounded="lg"> 
+            
                   <router-view />
-                </v-sheet>
-              </v-col>
+              
+            
             </v-row>
           </v-container>
         </v-main>
       </v-col>
     </v-row>
-
+    <footerV/>
   </v-app>
 </template>
 
 <script lang="ts">
-
+import footerV from './components/FooterVue.vue'
 
 export default {
-  components: { },
+  components: {
+    footerV,
+   },
   name: 'App',
 
   data() {
@@ -58,9 +59,11 @@ export default {
       drawer: false,
       links: [
         'Página Inicial',
-        'Ajuda',
       ],
     }
   },
+  methods() {
+    this.links
+  }
 };
 </script>
