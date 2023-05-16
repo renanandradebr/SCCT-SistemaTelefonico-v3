@@ -11,7 +11,7 @@
               <v-text-field v-model="usernamee" label="Nome de Usuário" outlined clearable></v-text-field>
               <v-text-field v-model="senha" label="Senha" type="password" outlined clearable></v-text-field>
               <v-checkbox v-model="Manterconectado" label="Manter-me Conectado"></v-checkbox>
-              <v-btn type="submit" color="blue" text-color="white" block>Acessar</v-btn>
+              <v-btn class="botaologin" type="submit" color="blue" text-color="white" block>Acessar</v-btn>
               <div class="EsqueciSenha">
                 <a href="/esqueceu-senha">Esqueci a senha</a>
               </div>
@@ -57,6 +57,10 @@ export default {
 </script>
   
 <style scoped>
+.botaologin{
+  font: bold 15pt Sora;
+  color: white;
+}
 .toolbar {
   color: #fff;
 }

@@ -70,7 +70,9 @@ export default {
 }
 
 .botoes3 {
+    font: bold 15pt Sora;
     border: solid red 2px;
 
 }
+
 </style>

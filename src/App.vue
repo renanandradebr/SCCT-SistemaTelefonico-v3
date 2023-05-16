@@ -64,3 +64,9 @@ export default {
   },
 };
 </script>
+<style>
+.navbar{
+  font: bold 15pt Sora;
+  
+}
+</style>

@@ -60,7 +60,7 @@ export default {
 }
 
 .botoesScct {
-  font: normal 10px Sora;
+  font: bold 10px Sora;
   position: relative;
   overflow: hidden;
   padding: 5px;
