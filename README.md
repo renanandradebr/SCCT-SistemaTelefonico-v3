@@ -24,8 +24,7 @@ Este é um projeto Vue para um sistema telefônico. O sistema inclui várias pá
 - Vue.js
 - Vuex
 - Vue Router
-- Axios
-- Bootstrap
+- Vuetify
 
 ## Contribuição
 
