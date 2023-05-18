@@ -53,6 +53,7 @@ export default {
 .titlecard{
   font: bolder 20pt Sora;
   margin-left: 15%;
+  
 }
 
 .cardbotoes{
