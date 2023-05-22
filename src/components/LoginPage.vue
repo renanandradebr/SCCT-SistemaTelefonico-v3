@@ -4,18 +4,24 @@
       <v-col cols="12" md="4" sm="8">
         <v-card class="cardlogin elevation-12">
           <v-toolbar color="white" dark flat class="d-flex align-center">
-            <v-img src="../assets/logo-scct.png" contain class="imglogo" width="130" />
+            <v-img src="../assets/logo-scct.png" contain width="145" />
           </v-toolbar>
           <v-card-text>
             <v-form @submit.prevent="Login">
-              <v-text-field v-model="usernamee" label="Nome de Usuário" outlined clearable></v-text-field>
-              <v-text-field v-model="senha" label="Senha" type="password" outlined clearable></v-text-field>
+              <v-text-field v-model="username" label="Nome de Usuário" outlined clearable></v-text-field>
+              <v-text-field v-model="password" label="Senha" type="password" outlined clearable></v-text-field>
               <v-checkbox v-model="Manterconectado" label="Manter-me Conectado"></v-checkbox>
               <v-btn class="botaologin" type="submit" color="blue" text-color="white" block>Acessar</v-btn>
-              <div class="EsqueciSenha">
+
+
+              <div class="text-center">
                 <a href="/esqueceu-senha">Esqueci a senha</a>
               </div>
             </v-form>
+            <div class="text-center">
+              <v-btn class="cadastro" color="green" small @click="paginaCadastro">Cadastre-se aqui</v-btn>
+            </div>
+
           </v-card-text>
         </v-card>
       </v-col>
@@ -27,23 +33,29 @@
 export default {
   data() {
     return {
-      email: '',
-      senha: '',
+      username: '',
+      password: '',
       lembrarLogin: false
     }
   },
   methods: {
-    Login() {
+    paginaCadastro() {
+      this.$router.push('/cadastro-login');
+    },
+    Login(event) {
+      event.preventDefault();
 
-      if (this.Manterconectado) {
+      // Verifique as credenciais aqui (por exemplo, com uma API)
+      if (this.username === 'admin' && this.password === 'password') {
+        // Armazene a autenticação como true no LocalStorage
+        localStorage.setItem('autenticado', 'true');
         localStorage.setItem('lembrarLogin', true);
+        // Redirecione para a página inicial
+        this.$router.push('/home');
       } else {
-        localStorage.removeItem('lembrarLogin');
+        alert('Credenciais inválidas. Tente novamente.');
       }
-      // vai redireciona o usuário para a página principal após o login
-
-      this.$router.push('/home');
-    }
+    },
   },
   created() {
 
@@ -57,24 +69,28 @@ export default {
 </script>
   
 <style scoped>
-.botaologin{
+.cadastro {
+  font: normal 10pt Sora;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+
+
+}
+
+.botaologin {
   font: bold 15pt Sora;
   color: white;
 }
+
 .toolbar {
   color: #fff;
 }
 
-.imglogo {
-  margin-left: 50%;
-}
-
-.EsqueciSenha {
-  margin-left: 25%;
-  padding: 5%;
-}
-
 .cardlogin {
   border: solid rgb(54, 54, 216) 2px;
+}
+
+.img {
+  border: solid red 2px;
 }
 </style>

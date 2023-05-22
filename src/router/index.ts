@@ -3,6 +3,8 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import LoginView from '../components/LoginPage.vue'
 import HomeView from '../views/HomeView.vue'
 import Cadastro from '../components/CadastroUsuario.vue'
+import AcessoNegado from '../components/AcessoNegado.vue'
+import cadastroLogin from '../components/cadastroLogin.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -20,6 +22,16 @@ const routes: Array<RouteConfig> = [
     path: '/cadastro',
     name: 'cadastro',
     component: Cadastro
+  },
+  {
+    path: '/acesso-negado',
+    name: 'acesso negado',
+    component: AcessoNegado
+  },
+  {
+    path: '/cadastro-login',
+    name: 'cadastro de login',
+    component: cadastroLogin
   },
   {
     path: '/about',
