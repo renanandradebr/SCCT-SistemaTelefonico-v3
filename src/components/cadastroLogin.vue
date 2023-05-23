@@ -1,28 +1,38 @@
 <template>
-    <div>
-      <h2>Cadastro</h2>
-      <v-form @submit.prevent="submitForm">
-        <v-text-field v-model="nome" label="Nome"></v-text-field>
-        <v-text-field v-model="email" label="E-mail"></v-text-field>
-        <v-text-field v-model="senha" label="Senha" type="password"></v-text-field>
-        <v-btn type="submit">Cadastrar</v-btn>
-      </v-form>
-    </div>
-  </template>
-  <script>
-  export default {
-    data() {
-      return {
-        nome: '',
-        email: '',
-        senha: '',
-      };
-    },
-    methods: {
-      submitForm() {
+  <v-container>
+    <h1>Cadastro de Usuário</h1>
+    <v-form ref="form" @submit="registerUser">
+      <v-text-field v-model="name" label="Nome" required></v-text-field>
+      <v-text-field v-model="email" label="Email" required></v-text-field>
+      <v-text-field v-model="password" label="Senha" type="password" required></v-text-field>
+      <v-text-field v-model="confirmPassword" label="Confirmar Senha" type="password" required></v-text-field>
+      <v-btn color="primary" @click="registerUser">Cadastrar</v-btn>
+    </v-form>
 
-        console.log('Dados de cadastro:', this.nome, this.email, this.senha);
-      },
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    };
+  },
+  methods: {
+    registerUser() {
+      // Lógica para cadastrar o usuário
+      // Você pode usar o this.name, this.email, this.password para obter os valores dos campos
+      // e fazer a requisição para o backend para realizar o cadastro
     },
-  };
-  </script>
+    loginUser() {
+      // Lógica para fazer o login do usuário
+      // Você pode usar o this.email, this.password para obter os valores dos campos
+      // e fazer a requisição para o backend para realizar o login
+    }
+  }
+};
+</script>

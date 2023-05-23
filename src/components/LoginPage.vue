@@ -3,8 +3,10 @@
     <v-row justify="center">
       <v-col cols="12" md="4" sm="8">
         <v-card class="cardlogin elevation-12">
-          <v-toolbar color="white" dark flat class="d-flex align-center">
+          <v-toolbar color="white" dark flat >
+            <v-col cols="12">
             <v-img src="../assets/logo-scct.png" contain width="145" />
+          </v-col>
           </v-toolbar>
           <v-card-text>
             <v-form @submit.prevent="Login">
