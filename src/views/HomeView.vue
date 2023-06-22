@@ -1,6 +1,18 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer v-model="drawer" app color="primary">
+      <v-list>
+        <v-list-item v-if ="user">
+          <v-list-item-avatar>
+            <v-icon>mdi-account-circle</v-icon>
+          </v-list-item-avatar>
+          <v-list-item-content >
+            <v-list-item-title >{{ user }}</v-list-item-title>
+            <v-list-item-subtitle>{{ 'renan@email.com' }}</v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <v-divider></v-divider>
       <v-list>
         <v-list-item v-for="item in menuItems" :key="item.id" link>
           <v-list-item-icon>
@@ -22,10 +34,6 @@
           {{ link.name }}
         </v-btn>
         <v-spacer></v-spacer>
-        <v-responsive max-width="260">
-          <v-text-field class="mp-10" dense flat hide-details rounded solo-inverted append-icon="mdi-magnify"
-            label="Pesquisar" outlined v-model="searchInput"></v-text-field>
-        </v-responsive>
         <v-divider class="mx-4" vertical></v-divider>
         <v-btn text color="white" @click="logout">
           <v-icon left>mdi-exit-to-app</v-icon>
@@ -55,6 +63,8 @@ export default Vue.extend({
   data() {
 
     return {
+      user: 'Renan Andrade',
+
       searchInput: '',
       links: [
         { name: 'Página Inicial', route: '/home' },
@@ -62,7 +72,6 @@ export default Vue.extend({
       ],
       drawer: false,
       menuItems: [
-        { id: 1, label: 'Login', icon: 'mdi-login', },
         { id: 2, label: 'Página Inicial', icon: 'mdi-home' },
         { id: 3, label: 'Página de Cadastros', icon: 'mdi-account-box' },
         { id: 4, label: 'Agendas Telefônicas', icon: 'mdi-phone' },
@@ -71,6 +80,7 @@ export default Vue.extend({
     }
   },
   methods: {
+
     logout() {
       // Lógica para efetuar o logout
       // Redirecionar para a rota de login
@@ -98,6 +108,7 @@ export default Vue.extend({
 .menu-item {
   font-family: 'Sora', sans-serif;
 }
+
 .mp-10 {
   margin-top: 10px;
 }
