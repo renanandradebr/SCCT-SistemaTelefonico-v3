@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import LoginView from '../components/LoginPage.vue'
+import LoginView from '../views/LoginView.vue'
 import HomeView from '../views/HomeView.vue'
-import Cadastro from '../components/CadastroUsuario.vue'
+import Cadastro from '../views/cadastroUsuarioView.vue'
 import AcessoNegado from '../components/AcessoNegado.vue'
 import cadastroLogin from '../components/cadastroLogin.vue'
 Vue.use(VueRouter)
