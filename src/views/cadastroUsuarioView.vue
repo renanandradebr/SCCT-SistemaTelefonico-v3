@@ -1,8 +1,8 @@
-<template> 
+<template>
     <v-container fluid class="fundo">
         <v-row justify="center">
             <v-col cols="12" sm="8" md="6" class="botoes3">
-                <v-card id="formulario1">
+                 <v-card id="formulario1">
                     <v-card-title class="text-center">Cadastro de Usuário</v-card-title>
                     <v-card-text>
                         <v-form ref="form">
@@ -39,14 +39,9 @@
         </v-row>
     </v-container>
 </template>
-<script >
-
-import HeaderV from './components/HeaderLogin.vue'
+<script lang="ts" >
 
 export default {
-    components: {
-        HeaderV,
-    },
     data() {
         return {
             nome: "",
@@ -76,12 +71,6 @@ export default {
     box-shadow: black 2px;
 
 }
-
-.fundo {
-    background-image: url('https://img.freepik.com/fotos-gratis/respingo-de-tinta-na-agua-escura_23-2147798303.jpg?w=740&t=st=1684778722~exp=1684779322~hmac=8e825c533ac8d7c8449cb26eaf088798f509297f239cce248ddf2c61604d1a95');
-    background-size: cover;
-}
-
 .botoes3 {
     font: bold 15pt Sora;
 }

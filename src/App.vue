@@ -1,6 +1,5 @@
 <template>
   <v-app >
-    <HeaderV/>
     <v-row>
       <v-col >
         <v-main>
@@ -17,13 +16,11 @@
 </template>
 
 <script lang="ts">
-import HeaderV from './components/HeaderLogin.vue'
 import footerV from './components/FooterVue.vue'
 
 export default {
   components: {
     footerV,
-    HeaderV,
    },
   name: 'App',
 
