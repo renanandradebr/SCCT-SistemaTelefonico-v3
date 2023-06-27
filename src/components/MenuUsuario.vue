@@ -48,7 +48,9 @@
     </div>
 </template>
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
     data() {
         return {
             fav: true,
@@ -62,19 +64,19 @@ export default {
     },
     methods: {
         redirectToHome() {
-            this.$router.push("./home");
+            (this.$router as any).push('./home');
         },
         logout() {
             // Lógica para efetuar o logout
             // Redirecionar para a rota de login
-            this.$router.push('./');
+            (this.$router as any).push('./');
         },
         goToRoute(route: string) {
             const selectedLink = this.links.find((item) => item.name === route);
             if (selectedLink) {
-                (this as any).$router.push(selectedLink.route);
+                (this.$router as any).push(selectedLink.route);
             }
         },
-    }
-}
+    },
+});
 </script>

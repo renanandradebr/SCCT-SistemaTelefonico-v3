@@ -15,7 +15,7 @@
                 <v-text-field v-model="password" label="Senha" type="password" outlined clearable></v-text-field>
                 <v-checkbox v-model="lembrarLogin" label="Manter-me Conectado"></v-checkbox>
                 <v-btn class="botaologin" type="submit" color="blue" text-color="white" block>Acessar</v-btn>
-                <v-divider></v-divider>
+                <v-spacer></v-spacer>
                 <div class="text-center">
                   <a href="/esqueceu-senha">Esqueci a senha</a>
                 </div>
@@ -52,7 +52,7 @@
       },
       login() {
         // Verifique as credenciais aqui (por exemplo, com uma API)
-        if (this.username === 'admin' && this.password === 'password') {
+        if (this.username === 'admin' && this.password === 'password123') {
           // Armazene a autenticação como true no LocalStorage
           localStorage.setItem('autenticado', 'true');
           localStorage.setItem('lembrarLogin', this.lembrarLogin.toString());

@@ -1,12 +1,13 @@
 <template>
-  <v-footer color="primary" dark fixed>
+  <v-footer color="primary" padless >
     <v-container fluid>
       <v-row align="center" justify="center">
         <v-col cols="6" class="text-center">
           <span class="footer-text">
-            &copy; 2023 | Companhia de Saneamento Ambiental do Maranhão - CAEMA
+            &copy; {{ new Date().getFullYear() }} — Companhia de Saneamento Ambiental do Maranhão - CAEMA
           </span>
-        </v-col><v-col cols="6">
+        </v-col>
+        <v-col cols="6">
           <v-card-text>
             <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
               <v-icon size="24px">
