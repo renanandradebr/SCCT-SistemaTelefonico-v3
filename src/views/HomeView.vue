@@ -1,10 +1,11 @@
 <template>
   <v-app>
     <header-p />
+    <hopcoes />
     <v-col cols="12">
       <home-page />
     </v-col>
-
+    <footerV />
   </v-app>
 </template>
 
@@ -12,9 +13,13 @@
 import Vue from 'vue'
 import HomePage from '../components/HomePage.vue'
 import HeaderP from '../components/HeaderPrincipal.vue'
+import Hopcoes from '../components/HeaderOpções.vue'
+import footerV from '../components/FooterVue.vue'
 export default Vue.extend({
 
   components: {
+    footerV,
+    Hopcoes,
     HomePage,
     HeaderP,
   },

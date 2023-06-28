@@ -1,8 +1,8 @@
-<template color="gray">
-    <v-container >
-        <v-toolbar color="primary" prominent>
+<template>
+
+        <v-toolbar color="primary" prominent flat>
             <v-toolbar-title class="title"><v-img src="..\src\assets\logo-scct2.png" transition="scale-transition"
-                    width="140" /></v-toolbar-title><v-divider class="mx-4" vertical></v-divider>
+                    width="400" /></v-toolbar-title><v-divider class="mx-4" vertical></v-divider>
             <v-container class="py-0 fill-height">
                 <v-spacer></v-spacer>
                 <v-divider class="mx-4" vertical></v-divider>
@@ -12,17 +12,6 @@
             </v-container>
 
         </v-toolbar>
-        <v-toolbar>
-            <v-row justify="center">
-                <v-col cols="12">
-                    <v-spacer></v-spacer>
-                    <v-btn v-for="link in links" :key="link.name" text @click="goToRoute(link.route)">
-                        {{ link.name }}
-                    </v-btn>
-                </v-col>
-            </v-row>
-        </v-toolbar>
-    </v-container>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';

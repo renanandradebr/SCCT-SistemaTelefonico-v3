@@ -27,16 +27,19 @@
           </v-card>
         </v-col>
       </v-row>
+      <footerV/>
     </v-container>
   </template>
   
   <script lang="ts">
   import { defineComponent } from 'vue';
   import HeaderV from '../components/HeaderLogin.vue';
+  import footerV from '../components/FooterVue.vue'
   
   export default defineComponent({
     components: {
       HeaderV,
+      footerV,
     },
   
     data() {
