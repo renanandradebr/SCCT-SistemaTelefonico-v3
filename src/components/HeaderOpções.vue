@@ -1,9 +1,9 @@
 <template>
-    <v-toolbar color='blue' flat >
+    <v-toolbar color='white' >
         <v-row justify="center">
             <v-col cols="12">
                 <v-spacer></v-spacer>
-                <v-btn text @click="goToRoute('Home')">
+                <v-btn text @click="goToRoute('home')">
                     Inicio
                 </v-btn>
                 <v-btn text @click="goToRoute('acesso-negado')">
