@@ -1,10 +1,12 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="12" md="6" lg="4" v-for="button in buttons" :key="button.id">
-        <v-btn class="menu-button" :color="button.color" block outlined large @click="goToRoute(button.route)">
-          {{ button.label }}
-        </v-btn>
+      <v-col cols="12"  v-for="button in buttons" :key="button.id">
+        <div class="d-flex flex-column flex-sm-row menu-button">
+          <v-btn class="menu-button" :color="button.color" outlined large @click="goToRoute(button.route)">
+            {{ button.label }}
+          </v-btn>
+        </div>
       </v-col>
     </v-row>
   </v-container>
@@ -35,7 +37,6 @@ export default {
 
 <style scoped>
 .menu-button {
-  margin-bottom: 16px;
   font-family: 'Sora', sans-serif;
 }
 </style>

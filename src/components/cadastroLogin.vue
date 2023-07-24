@@ -12,7 +12,7 @@
   </v-container>
 </template>
 
-<script >
+<script lang="ts">
 export default {
   data() {
     return {
@@ -25,7 +25,7 @@ export default {
   methods: {
     registerUser() {
       // Lógica para cadastrar o usuário
-      // Você pode usar o this.name, this.email, this.password para obter os valores dos campos
+      // Você pode uthissar o .name, this.email, this.password para obter os valores dos campos
       // e fazer a requisição para o backend para realizar o cadastro
     },
     loginUser() {
