@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar color='white' >
+    <v-toolbar color='white' flat >
         <v-row justify="center">
             <v-col cols="12">
                 <v-spacer></v-spacer>

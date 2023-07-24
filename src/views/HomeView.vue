@@ -1,13 +1,18 @@
 <template>
   <v-app>
-    <header-p />
-    <hopcoes />
-    <v-col cols="12">
-      <home-page />
-    </v-col>
-    <footerV />
+    <v-container>
+      <header-p />
+      <hopcoes />
+      <v-row>
+        <v-col cols="12">
+          <home-page />
+        </v-col>
+      </v-row>
+      <footerV />
+    </v-container>
   </v-app>
 </template>
+
 
 <script lang="ts">
 import Vue from 'vue'
