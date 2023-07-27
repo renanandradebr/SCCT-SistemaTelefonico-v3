@@ -1,17 +1,35 @@
 <template>
-  <v-toolbar color="primary" prominent flat>
-    <v-toolbar-title class="title">
-      <v-img src="..\src\assets\logo-scct2.png" transition="scale-transition" width="400" />
-    </v-toolbar-title>
-    <v-divider class="mx-4" vertical></v-divider>
-    <v-container class="py-0 fill-height">
-      <v-spacer></v-spacer>
-      <v-divider class="mx-4" vertical></v-divider>
-      <v-user @click="goToRoute('/profile')">
-        <Menuser />
-      </v-user>
-    </v-container>
-  </v-toolbar>
+  <v-app>
+    <v-toolbar color="primary" :prominent="$vuetify.breakpoint.mdAndUp" flat>
+      <v-container>
+        <v-row :align="$vuetify.breakpoint.mdAndUp ? 'center' : 'start'" :justify="$vuetify.breakpoint.mdAndUp ? 'start' : 'space-between'">
+          <v-col cols="12" md="3">
+            <v-toolbar-title class="title">
+              <v-img src="..\src\assets\logo-scct2.png" transition="scale-transition" width="400" />
+            </v-toolbar-title>
+          </v-col>
+
+          <v-col cols="12" md="9">
+            <v-row :align="$vuetify.breakpoint.mdAndUp ? 'center' : 'end'" :justify="$vuetify.breakpoint.mdAndUp ? 'end' : 'space-between'">
+              <v-col cols="auto">
+                <v-divider v-if="$vuetify.breakpoint.mdAndUp" class="mx-4" vertical></v-divider>
+              </v-col>
+
+              <v-col cols="auto" class="py-0">
+                <v-user @click="goToRoute('/profile')">
+                  <Menuser />
+                </v-user>
+              </v-col>
+
+              <v-col cols="auto">
+                <v-divider v-if="$vuetify.breakpoint.mdAndUp" class="mx-4" vertical></v-divider>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-toolbar>
+  </v-app>
 </template>
 
 <script lang="ts">
