@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col cols="12" sm="6" md="4" v-for="button in buttons" :key="button.id">
+      <v-col cols="12" sm="6" md="4" v-for="button in buttons" :key="button.id" class="text-center">
         <div class="d-flex flex-column align-center">
           <v-btn :color="button.color" outlined large @click="goToRoute(button.route)">
             <v-icon left>{{ button.icon }}</v-icon>
