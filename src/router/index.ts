@@ -5,6 +5,7 @@ import HomeView from '../views/HomeView.vue'
 import Cadastro from '../views/cadastroUsuarioView.vue'
 import AcessoNegado from '../components/AcessoNegado.vue'
 import cadastroLogin from '../components/cadastroLogin.vue'
+import esqueceuSenha from '../views/esqueceuSenha.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
@@ -32,6 +33,11 @@ const routes: Array<RouteConfig> = [
     path: '/cadastro-login',
     name: 'cadastro de login',
     component: cadastroLogin
+  },
+  {
+    path: '/esqueceu-senha',
+    name:'esqueceu senha',
+    component: esqueceuSenha
   },
   {
     path: '/about',
