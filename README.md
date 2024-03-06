@@ -37,4 +37,3 @@ Este projeto é licenciado sob a licença MIT. Consulte o arquivo LICENSE para o
 ## Autores
 
 - Renan Andrade - Desenvolvedor do projeto
-- Giovani Lucas - Desenvolvedor do projeto
